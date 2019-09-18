@@ -1,10 +1,3 @@
-//
-//  TimedEvents.h
-//  S3 Workshop2_lab
-//
-//  Created by Mintae Kim on 2019-09-15.
-//  Copyright © 2019 Mintae Kim. All rights reserved.
-//
 
 #ifndef SDDS_TIMEDEVENTS_H
 #define SDDS_TIMEDEVENTS_H
@@ -15,20 +8,20 @@
 
 namespace sdds {
     class TimedEvents {
-        static int numOfRecordStored;
+        int numOfRecordStored = 0;
         std::chrono::steady_clock::time_point start_time;
         std::chrono::steady_clock::time_point end_time;
         struct {
-            const char* event_name;
-            const char* units_time;
+            std::string event_name;
+            std::string units_time = "nanoseconds";
             std::chrono::steady_clock::duration dur_time;
-        };
+        }arrayRecords[MAXIMUM_RECORD_OBJECTS];
     public:
         TimedEvents();
         void startClock();
         void stopClock();
         void recordEvent(const char* str);
-        friend std::ostream operator <<(std::ostream& os, TimedEvents& obj);
+        friend std::ostream& operator <<(std::ostream& os, TimedEvents& obj);
     };
     
 }

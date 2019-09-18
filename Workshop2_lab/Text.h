@@ -11,7 +11,7 @@
 #include <string>
 namespace sdds {
     class Text {
-        static unsigned int numOfRecord;
+        unsigned int numOfRecord;
         std::string* f_name;
         
     public:
