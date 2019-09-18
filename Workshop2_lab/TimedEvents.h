@@ -6,8 +6,8 @@
 //  Copyright © 2019 Mintae Kim. All rights reserved.
 //
 
-#ifndef SDDS_TimedEvents_H
-#define SDDS_TimedEvents_H
+#ifndef SDDS_TIMEDEVENTS_H
+#define SDDS_TIMEDEVENTS_H
 #include <iostream>
 #include <chrono>
 #include <string>
