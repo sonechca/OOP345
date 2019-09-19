@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 #include "Text.h"
 
 namespace sdds {
@@ -10,15 +11,37 @@ namespace sdds {
     Text::Text(const char* name){
         std::ifstream f_file;
         f_file.open(name);
-        
-        if(f_file.is_open()){
-            for (std::string word; f_file >> word; ++numOfRecord) {}
+        std::string word;
+        char c;
+        word.clear();
+        if(!f_file){
+            return;
+        }
+        else{
+            while(!f_file.eof()){
+                c = f_file.get();
+                if(c == ' '){
+                    numOfRecord++;
+                }
+            }
         }
         
-        f_name = new std::string[numOfRecord];
         
-        for (int i = 0; i < numOfRecord; i++) {
-            std::getline(f_file, f_name[i]);
+//        if(f_file.is_open()){
+//            do {
+//                getline(f_file, word, ' ');
+//                numOfRecord++;
+//            } while(!f_file.eof());
+//        }
+//        else{
+//            return;
+//        }
+        
+        
+        f_name = new std::string[numOfRecord];
+
+        for (unsigned int i = 0; i < numOfRecord; i++) {
+            getline(f_file, f_name[i]);
         }
         
     }
@@ -30,11 +53,14 @@ namespace sdds {
         if(this != &copy){
             numOfRecord = copy.numOfRecord;
             delete [] f_name;
-            
-            f_name = new std::string[numOfRecord];
-            for (int i = 0; i < numOfRecord; i++) {
-                f_name[i] = copy.f_name[i];
+            if(copy.f_name != nullptr){
+                f_name = new std::string[numOfRecord];
+                
+                for (size_t i = 0; i < numOfRecord; i++) {
+                    f_name[i] = copy.f_name[i];
+                }
             }
+          
         }
         return *this;
     }

@@ -13,9 +13,10 @@ namespace sdds {
         std::chrono::steady_clock::time_point end_time;
         struct {
             std::string event_name;
-            std::string units_time = "nanoseconds";
+            std::string units_time;
             std::chrono::steady_clock::duration dur_time;
         }arrayRecords[MAXIMUM_RECORD_OBJECTS];
+    
     public:
         TimedEvents();
         void startClock();
