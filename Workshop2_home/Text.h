@@ -18,7 +18,9 @@ namespace sdds {
         Text();
         Text(const char* name);
         Text(const Text& copy);
+        Text(Text&& move);
         Text& operator=(const Text& copy);
+        Text& operator=(Text&& move);
         ~Text();
         size_t size() const;
     };

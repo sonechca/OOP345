@@ -62,6 +62,10 @@ namespace sdds {
     Text::Text(const Text& copy){
         *this = copy;
     }
+    // Move constructor
+    Text::Text(Text&& move){
+        *this = std::move(move);
+    }
     
     // Copy operator
     Text& Text::operator=(const Text& copy){
@@ -81,6 +85,18 @@ namespace sdds {
             *this = Text();
         }
         
+        return *this;
+    }
+    
+    // Move operator
+    Text& Text::operator=(Text&& move){
+        if(this != &move){
+            numOfRecord = move.numOfRecord; // Move move.numOfRecord to numOfRecord
+            move.numOfRecord = 0; // Remove the parameter's numOfRecord
+            
+            f_name = move.f_name; // Move to move.f_name to f_name
+            move.f_name = nullptr; // Remove  the parameter's f_name
+        }
         return *this;
     }
     
