@@ -1,0 +1,24 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Sept 22, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+1.the reason for the significant time difference between the copy and move operations
+- With dynamic allocation memory, the copy operations speed is slower than the move operations speed.
+  Copy operations are working for making a full copy of string including allocation of another array in
+  dynamic memory, while Move operations are working for only transfer value of pointer itself to another
+  one and are removed itself address. So, They have different time to work.
+
+2. I have learned about move constructor and move operator. It seem like copy Constructor and operator but I should
+   understand Rvalue and '&&'. It is easy to understand and I can use immediately. Most hard part is the counting of
+   words. I should understand 'ifstream' because I needed to count words from file. I searched a lot and I tried
+   various medtods. It was good challenge and I have confidence that I can use again. Also It was difficult of time
+   count. I didn't know this before also I studied a lot of this, but Actually I couldn't understand all. I just
+   Followed Intruction.
+   
+Quiz 2 reflection
+- question 2 : I didn't describe pure virtual function what each does, I just wrote that we need 'virtual' and '=0'.
+- Answer : 'Virtual' term indicates that this is a virtual function compared to the basic function. And 'virtual function =         0' tells the compiler that this function only exists as a name/identifier to be referenced but won’t have any           implementation

@@ -1,7 +1,7 @@
 // Name: Mintae Kim
 // Seneca Student ID: 141915181
 // Seneca email: mkim221@myseneca.ca
-// Date of completion: Sept 19, 2019
+// Date of completion: Sept 22, 2019
 //
 // I confirm that the content of this file is created by me,
 //   with the exception of the parts provided to me by my professor.
@@ -95,7 +95,7 @@ namespace sdds {
             move.numOfRecord = 0; // Remove the parameter's numOfRecord
             
             f_name = move.f_name; // Move to move.f_name to f_name
-            move.f_name = nullptr; // Remove  the parameter's f_name
+            move.f_name = nullptr; // Remove the parameter's f_name
         }
         return *this;
     }
