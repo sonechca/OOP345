@@ -1,10 +1,10 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Sep 26, 2019
 //
-//  LVPair.hpp
-//  S3 workshop 3 lab
-//
-//  Created by Mintae Kim on 2019-09-24.
-//  Copyright © 2019 Mintae Kim. All rights reserved.
-//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
 
 #ifndef SDDS_LVPAIR_H
 #define SDDS_LVPAIR_H
@@ -16,15 +16,24 @@ namespace sdds {
         L typeName;
         V typeValue;
     public:
-        LVPair();
-        LVPair(const L& aa, const V& bb);
-        const L& key() const;
-        const V& value() const;
-        void display(std::ostream& os) const;
+        LVPair(): typeName{}, typeValue{} {} // Constuctor
+        LVPair(const L& aa, const V& bb): typeName(aa),typeValue(bb){}; //constuctor with parameters
+        const L& key() const{
+            return typeName;
+        }
+        const V& value() const{
+            return typeValue;
+        }
+        void display(std::ostream& os) const{
+            os << key() << " : " << value() << std::endl; //output
+        }
     };
-
+// helper function for helping display
 template <typename L, typename V>
-std::ostream& operator<<(std::ostream& os, const sdds::LVPair<L, V>& pair);
+std::ostream& operator<<(std::ostream& os, const sdds::LVPair<L, V>& pair){
+    pair.display(os);
+    return os;
+}
 }
 
 #endif /* LVPair_hpp */
