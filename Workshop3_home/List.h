@@ -29,5 +29,17 @@ namespace sdds {
             }
         }
 };
+    template <typename L, typename V, typename T, int N>
+    class LVList : public List<T, N> {
+    public:
+        V accumulate(const L& label) const {
+            SummableLVPair<L, V> initValue;
+            V accumulValue = initValue.getInitialValue();
+            for(size_t i = 0; i < N; i++){
+                accumulValue = initValue.sum(label, accumulValue);
+            }
+            return accumulValue;
+        }
+};
 }
 #endif /* List_hpp */

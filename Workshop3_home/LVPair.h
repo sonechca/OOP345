@@ -56,25 +56,26 @@ public:
     }
     
     V sum(const L& lbl, const V& val) const {
-        V sum = 0;
-        return sum;
+        return LVPair<L, V>::value() + val;
     }
     
     void display(std::ostream& os) const {
-        
+        os << LVPair<L, V>::key() << ": " << LVPair<L, V>::value() << std::endl;
     }
-    
-    template<>
-    SummableLVPair<std::string, std::string>::SummableLVPair(){
-        
-    }
-    
-    template<>
-    SummableLVPair<std::string, int>::SummableLVPair(){}
-    
    
-    
 };
+template<>
+SummableLVPair<std::string, std::string>::SummableLVPair(){
+       
+   }
+   
+template<>
+SummableLVPair<std::string, int>::SummableLVPair(){}
+   
+template<>
+std::string SummableLVPair<std::string, std::string>::sum(const std::string& lbl, const std::string& val) const{
+    return val + ", " + LVPair<std::string, std::string>::value();
+}
 }
 
 #endif /* LVPair_hpp */
