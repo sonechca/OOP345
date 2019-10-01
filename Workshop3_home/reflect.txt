@@ -1,0 +1,22 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Sep 30, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+1. the reason for specializing the `sum()` member function.
+    - Main function uses the int and string form when we use templates in the main function. Since the '+'  is not available when using string as a template, the 'sum()' member function need to specialize for string.
+    
+2. the reason for specializing the initial value for a summation.
+    - In the case of <typename V>, both string and numeric values may come, so we must reset them separately by using specializing for each type.
+    
+3. the reason for defining the class variable outside the class definition.
+    - Because the class variable is 'static' declared, it should be defined again outside the class to use the variable.
+
+4. Through this workshop, I learned how to use and utilize templates. Specializing templates was a very difficult part. We spent a lot of time specifying and recalling specialized values. Also, I still don't understand the Accumulate part in List.h. Although I solved it through Google, I think I need to study more.
+
+Quiz 3 reflect
+ 2) Explain the creation/destruction of objects with aggregration, EX. An object called school may have objects of students
+    - Each object exist on their own so ower object is not in charge of creating it's object. if school object is destoryed, ths student objects still exist.
