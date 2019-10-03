@@ -1,10 +1,10 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Oct 3, 2019
 //
-//  Reservation.hpp
-//  S3 Workshop 4 lab
-//
-//  Created by Mintae Kim on 2019-10-02.
-//  Copyright © 2019 Mintae Kim. All rights reserved.
-//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
 
 #ifndef SDDS_RESERVATION_H
 #define SDDS_RESERVATION_H
@@ -20,7 +20,7 @@ namespace sdds {
         string res_email;
         size_t res_num;
         int p_day;
-        int p_time;
+        int p_hour;
     public:
         Reservation();
         Reservation(const std::string& m_res);
