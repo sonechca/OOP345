@@ -1,5 +1,10 @@
-// Workshop 5 - Functions and Error Handling
-// 2019/10 - Cornel
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Oct 10, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
 
 #include <iostream>
 #include <iomanip>
@@ -55,7 +60,7 @@ int main(int argc, char** argv)
     //            and save the new price in the book object
     //       - if the book was published in UK between 1990 and 1999 (inclussive),
     //            multiply the price with "gbpToCadRate" and save the new price in the book object
-    auto fixedBookPrice = [&](Book& obj){ // lambda function for adding cadRate
+    auto fixedBookPrice = [&](Book& obj)-> double { // lambda function for adding cadRate
         if(obj.country() == "US"){
             return obj.price() *= usdToCadRate;
         }

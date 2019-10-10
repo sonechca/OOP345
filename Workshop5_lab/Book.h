@@ -1,10 +1,10 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Oct 10, 2019
 //
-//  Book.hpp
-//  S3 Workshop 5 lab
-//
-//  Created by Mintae Kim on 2019-10-10.
-//  Copyright © 2019 Mintae Kim. All rights reserved.
-//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
 
 #ifndef SDDS_BOOK_H
 #define SDDS_BOOK_H
