@@ -1,5 +1,10 @@
-// Workshop 4 - Containers
-// 2019/09/27 - Cornel
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Oct 5, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
 
 #include <iostream>
 #include <iomanip>
@@ -107,40 +112,40 @@ int main(int argc, char** argv)
 
 
 	// Confirmation Sender
-//	{
-//		std::cout << "CS: Testing Constuctor\n";
-//		std::cout << "==========================\n";
-//		sdds::ConfirmationSender sender1;
-//		std::cout << sender1;
-//		std::cout << "==========================\n\n";
-//
-//		std::cout << "CS: Testing Operators\n";
-//		std::cout << "==========================\n";
-//		sender1 += *ppReservations[5];
-//		sender1 += *ppReservations[16];
-//		sender1 += *ppReservations[16];
-//		sender1 += *ppReservations[8];
-//		std::cout << sender1;
-//		sender1 -= *ppReservations[8];
-//		sender1 -= *ppReservations[7];
-//		std::cout << sender1;
-//		std::cout << "==========================\n\n";
-//
-//		std::cout << "CS: Testing Copy Constuctor\n";
-//		std::cout << "==========================\n";
-//		sdds::ConfirmationSender sender2(sender1);
-//		std::cout << sender1;
-//		std::cout << sender2;
-//		std::cout << "==========================\n\n";
-//
-//		std::cout << "CS: Testing Move Constuctor\n";
-//		std::cout << "==========================\n";
-//		sdds::ConfirmationSender sender3(std::move(sender1));
-//		std::cout << sender1;
-//		std::cout << sender3;
-//		std::cout << "==========================\n\n";
-//
-//	}
+	{
+		std::cout << "CS: Testing Constuctor\n";
+		std::cout << "==========================\n";
+		sdds::ConfirmationSender sender1;
+		std::cout << sender1;
+		std::cout << "==========================\n\n";
+
+		std::cout << "CS: Testing Operators\n";
+		std::cout << "==========================\n";
+		sender1 += *ppReservations[5];
+		sender1 += *ppReservations[16];
+		sender1 += *ppReservations[16];
+		sender1 += *ppReservations[8];
+		std::cout << sender1;
+		sender1 -= *ppReservations[8];
+		sender1 -= *ppReservations[7];
+		std::cout << sender1;
+		std::cout << "==========================\n\n";
+
+		std::cout << "CS: Testing Copy Constuctor\n";
+		std::cout << "==========================\n";
+		sdds::ConfirmationSender sender2(sender1);
+		std::cout << sender1;
+		std::cout << sender2;
+		std::cout << "==========================\n\n";
+
+		std::cout << "CS: Testing Move Constuctor\n";
+		std::cout << "==========================\n";
+		sdds::ConfirmationSender sender3(std::move(sender1));
+		std::cout << sender1;
+		std::cout << sender3;
+		std::cout << "==========================\n\n";
+
+	}
 	// cleanup
 	for (auto i = 0u; i < cnt; ++i)
 		delete ppReservations[i];

@@ -1,10 +1,10 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Oct 5, 2019
 //
-//  ConfirmationSender.hpp
-//  S3 Workshop 4 lab
-//
-//  Created by Mintae Kim on 2019-10-04.
-//  Copyright © 2019 Mintae Kim. All rights reserved.
-//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
 
 #ifndef SDDS_CONFIRMATIONSENDER_H
 #define SDDS_CONFIRMATIONSENDER_H
@@ -14,9 +14,13 @@
 #include "Reservation.h"
 namespace sdds {
 class ConfirmationSender{
-    const sdds::Reservation** revPointer;
+    const Reservation** revPointer;
     size_t numOfConfirm;
 public:
+    ConfirmationSender();
+    ConfirmationSender(const ConfirmationSender& copy);
+    ConfirmationSender(ConfirmationSender&& move);
+    ~ConfirmationSender();
     ConfirmationSender& operator+=(const Reservation& res);
     ConfirmationSender& operator-=(const Reservation& res);
     friend std::ostream& operator<<(std::ostream& os, const ConfirmationSender& con);

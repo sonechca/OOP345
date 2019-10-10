@@ -1,0 +1,12 @@
+
+1. The difference between the implementations of a composition and an aggregation.
+    - The composition is that parents' object and child object relate dependence "has-a" relationship so the parents' object is a charge of the creation and destruction of their dependent object. However, aggregation is that parents' object isn't in charge of creating and destruction of their child's object. they are independent and connect by pointer.
+
+2. The difference between the implementations of move and copy functions in a composition and an aggregation.
+    -  The composition of a copy or move function can use a shallow copy because they connected dependent. however, the aggregation of copy and move should use a deep copy because they connected by a pointer and they need to use dynamic memory when they want to copy or move data.
+
+3. I have learned about the relationship between two different objects. It is very important because I should compare how to use copy and move in different relationships such as composition and aggregation. The most difficult part is confirmationSender because I should control the const value.  I try to find answer so I used const_cast. However, I didn't know const_cast<const reservation**>  and I learned about this how to use it with my friends. it was a good challenge but I felt it was so difficult to finish.
+
+Quiz 4 Refelction
+ 2. What typing do you need when assigning a lamda to a variable? why?
+  - I aswsered without "auto". lambda is annonymous function so we should use type auto.
