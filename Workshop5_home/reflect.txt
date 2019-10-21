@@ -1,0 +1,23 @@
+// Name: Mintae Kim
+// Seneca Student ID: 141915181
+// Seneca email: mkim221@myseneca.ca
+// Date of completion: Oct 17, 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+1.the difference between the implementations/utilizations of a functor and a lambda expression.  When is appropriate to use each one?
+    - The biggest difference in function is the lambda expression, which is an anonymous function that is included in and used within other functions. When using a function that is only called once, it can be replaced by a lambda function.
+2. the constructor for `SpellChecker` generates an exception in certain conditions.  How would you change your code to achieve the same result, but without exceptions (both on the constructor and on the client side)? Compare the two solutions.
+    - When we open a file from the main function, we can check the file for errors. Then we can check the output error called 'cerr' separately, so if we check instead, we don't have to change the file error separately from spellChecker.
+3. the classes `Movie` and `Book` contain almost identical logic in loading data from the file. How would you redesign the classes in order **not** to duplicate that logic?
+    - A function for the same logic will be produced separately. It can be produced in a virtual parent class, where Movie and Book can be inherited under this function and made available for use. Then we can call up the function to find the words with the delimiter. We have the advantage of using code more efficiently.
+4. the classes `Movie` and `Book` are instantiated from the `main()` function using a custom constructor, but they also contain a default constructor.  Is the default constructor necessary? Could you remove it? Justify your answer.
+    - The default constructor will basically be created by the compiler without having to set it up separately. So even if we don't declare it separately, the program will run without any problems.
+    
+quiz 5 reflection
+1. what is an iterator in terms of containers?
+    -We use iterators to traverse the container structure as they aren’t always stored in a shared block in memory
+2. List havs sub-optimal storage. why is that so, when compared to vector and deques?
+    - List has node that can point to the next or previous node. Since lists use nodes, they aren’t as efficient as arrays, but they have more functionality than deques or vectors
+
